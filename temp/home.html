@@ -1,0 +1,45 @@
+{% load static %}
+<style>
+    body {
+        background: #6eb3f3c5 
+        url('{% static 'ab.png'%}') no-repeat right;
+    }
+    button {
+         background: rgba(97, 97, 241, 0.555) ;
+         font-size: large;
+         color: rgb(255, 255, 255);
+         border: none;
+         border-radius: 100px;
+         cursor: pointer;
+    }
+    p {
+        font-family: Roboto;
+    }
+
+</style>
+<body alink="blue" vlink="White">
+<img src="{% static 'ai.png'%}">
+<p><b> This is official website of AirUttarkashi, Here you can <a href="booking">Book Flight Ticket</a>.<br>
+    AirUttarkashi is new airline company open in Uttarkashi.<br>
+    AirUttarkashi serves 4 destinations and flight travel to these 
+    loacation daily.
+</b></p>
+<br>
+<h2>Ticket Prices:-</h2>
+<p>    
+    <b>
+    1. Uttarkashi to Dheradun =  ₹1000* <br>
+    2. Uttarkashi to Delhi    =  ₹5000* <br>
+    3. Uttarkashi to Mumbai   =  ₹7000* <br>
+    4. Uttarkashi to Chennai  =  ₹8000* </b><br><br>
+    <button><a href="booking" align="right">Click here to Book Ticket</a></button><br>
+</p>
+<br><br><br>
+Note:- <br>
+1. Above Prices is for Economy-class.<br> 
+2. For Business-class ticket price = 'Economy-ticket price' + ₹200.<br>
+3. For First-class ticket price = 'Economy-ticket price' + ₹500.<br>
+
+<button><a href="details">Click here</a></button> to see details related to Flight.<br><br>
+<button><a href="sr">Search</a>
+</body>

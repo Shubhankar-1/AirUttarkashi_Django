@@ -1,0 +1,29 @@
+{% load static %}
+<img src="{% static 'ai.png'%}">
+<h1 align='center'>Your Ticket Booked Successfully !!</h1>
+<style> 
+  body {
+        background: springgreen
+        url('{% static 'tic.png'%}') no-repeat left;
+        
+    }
+</style>
+
+<br><br><br><br>
+<b>Name:</b>  {{ fname }} {{ lname }}<br><br><b>From:</b>{{ frm }}  <b>To:</b>{{ to }}<br><br>
+<b>Mob:</b> {{ mob }}<br><br><b>Flight Date:</b> {{ fdate }}  <b>Class:</b> {{ cl }}
+  </b>
+<body>
+<br><br><br>
+<h2>Take screenshot of above ticket ^</h2>
+
+<b>
+Instructions:-<br>
+1. The boarding-gate will close 20 minutes before departure.<br>
+2. You have to bring Aadhar-car/ID-Proof. <br>
+3. Show screenshot of ticket to boarding-counter.<br>
+4. This is not Original Ticket.<br>
+5. Original ticket will be given to you at airport.<br>
+<button><a href="details">Click here</a></button> to see details related to Flight.
+</b>
+</body>

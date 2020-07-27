@@ -1,0 +1,81 @@
+<style>
+    html{
+        scale: 10%;
+    }
+    body{
+        background: linear-gradient(-45deg,rgb(245, 65, 20),rgba(0, 17, 255, 0.842));
+        font-color: white;
+    }
+    div{
+        color: rgb(255, 255, 255);
+    }
+    h1{
+        color: white;
+    }
+    input, select, textarea {
+  width: 18%;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.582);
+  border: 10px solid rgba(204, 204, 204, 0);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgba(38, 233, 31, 0.842) ;
+  font-size: large;
+  color: rgb(255, 255, 255);
+  padding: 10px 10px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(133, 231, 21, 0.897);
+}
+img {
+    width: 30%;
+}
+
+</style>
+<html>
+{% load static %}
+<body>
+        <img src="{% static 'ai2.png'%}">
+<h1 align="center" > Search Ticket Holder</h1>
+
+<form method="POST" action="sr" align=center>
+{% csrf_token %}
+<input type="text" name="srh" placeholder="Enter Name" required><br>
+<input type="submit" value="search">
+</form>
+<div>
+{% if messages %}
+    <ul>
+        {% for k in messages %}
+           <li>{{ k }}</li>
+        {% endfor %}
+     </ul>
+{% endif %}  
+</div>
+<div>
+{% if sr %}
+    {% for k in sr %}
+    <hr><p>
+        <b>Name:</b> {{k.First_Name}}<br>
+        <b>Last Name:</b> {{k.Last_Name}}<br>
+        <b>Mob:</b> {{k.Mob}}<br>
+        <b>Flight Date:</b> {{k.Flight_Date}}<br>
+        <b>Class:</b> {{k.Class}}<br>
+        <b>From:</b> {{k.From}}<br>
+        <b>To:</b> {{k.To}}<br>
+    </p>
+    <hr>
+    {% endfor %}
+{% endif %}
+</body>
+</html>

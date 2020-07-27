@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    {% load static %}
+<head>
+<style>
+body {font-family: Arial;
+      background: linear-gradient(to left,rgb(0, 255, 234),rgb(41, 216, 108));
+}
+
+input, select, textarea {
+  width: 18%;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.582);
+  border: 10px solid rgba(204, 204, 204, 0);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 2px;
+  margin-bottom: 5px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: rgba(31, 119, 233, 0.842) ;
+  font-size: large;
+  color: rgb(255, 255, 255);
+  padding: 10px 650px;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: rgba(53, 21, 231, 0.781);
+}
+
+.container {
+  border-radius: 10px;
+  background: linear-gradient(-60Deg,rgba(2, 89, 250, 0.74),rgba(184, 252, 25, 0.76));
+  padding: 20px;}
+
+</style>
+</head>
+<body>
+<img src="{% static 'ai.png'%}" >
+<h2 align = center>Book Ticket</h2>
+<div class="container">
+  <form action="det/" method="POST">
+    
+    {% csrf_token %}
+<b>
+    <label>First Name:</label>
+    <input type="text" name="First_Name" placeholder="Your First name.." required>
+
+    <label>Last Name:</label>
+    <input type="text" name="Last_Name" placeholder="Your Last name.." required>
+
+    <label>From:</label>
+    <select name="From" required>
+      <option value="Uttarkashi">Uttarkashi</option>
+    </select>
+
+    <label>To:</label>
+    <select name="To"  required>
+      <option value="Dheradun">Dheradun</option>
+      <option value="Delhi">Delhi</option>
+      <option value="Mumbai">Mumbai</option>
+      <option value="Chennai">Chennai</option>
+    </select>
+    <br>
+    <label>Mobile No.:</label>
+    <input type="number" name="Mob" placeholder="Your Number" required>
+
+    <label>Flight date:</label>
+    <input type="date" name="Flight_Date" required>
+    
+    <label>Class:</label>
+    <select name="Class"  required>
+      <option value="Economy">Economy-Class </option>
+      <option value="Business">Business-Class * ₹200</option>
+      <option value="First">First-Class * ₹500</option>
+    </select>
+    <br><br>
+
+    <input type="submit" value="Submit" >
+  </form>
+</div>
+</b>
+<img src="{% static 'fi.png'%}" align=right>
+  <h3>
+    Ticket Prices:-
+  </h3>
+  <b>
+      1. Uttarkashi to Dheradun =  ₹1000* (8:00 AM) <br><br>
+      2. Uttarkashi to Delhi    =  ₹5000* (9:00 AM) <br><br>
+      3. Uttarkashi to Mumbai   =  ₹7000* (10:00 AM) <br><br>
+      4. Uttarkashi to Chennai  =  ₹8000* (11:00 AM) <br><br>
+</b>
+Note:- Flights goes to above locations daily.
+
+</body>
+</html>

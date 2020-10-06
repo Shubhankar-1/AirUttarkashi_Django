@@ -1,7 +1,7 @@
 # AirUttarkashi (Django project)
 
 This is my 12th grade project for school .<br>
-This Project is Django based Flight Booking site.<br><br>
+This Project is Django based Flight Booking site.<br>
 
 ###-----Requirements-------<br>
 🍕 Python 3 <br>

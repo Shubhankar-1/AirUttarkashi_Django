@@ -28,4 +28,4 @@ This Project is Django based Flight Booking site.<br>
 <img src = "Shot/Details.png">
 
 ### 5.Search Page<br>
-<img src = "Shot/search.jpg">
+<img src = "Shot/Search.png">
